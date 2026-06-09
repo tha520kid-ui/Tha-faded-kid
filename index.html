@@ -3,59 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tha Faded Kid</title>
+<title>Tha Faded Kid | Tucson Mobile Barber</title>
 
 <style>
+*{box-sizing:border-box}
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#111;
+background:#07142b;
 color:white;
+}
+.hero{
+min-height:100vh;
+padding:40px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(7,20,43,.85),rgba(7,20,43,.95)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+}
+.badge{
+display:inline-block;
+padding:8px 14px;
+border:2px solid #ab0520;
+border-radius:50px;
+color:white;
+background:#ab0520;
+font-weight:bold;
+margin-bottom:20px;
+}
+h1{
+font-size:54px;
+margin:10px 0;
+letter-spacing:2px;
+color:white;
+text-shadow:3px 3px #ab0520;
+}
+.subtitle{
+font-size:22px;
+color:#e2e8f0;
+}
+.cta{
+display:inline-block;
+margin:15px 8px;
+padding:16px 24px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+.call{background:#ab0520;color:white}
+.text{background:white;color:#07142b}
+.section{
+padding:45px 20px;
 text-align:center;
 }
-
-.hero{
-padding:60px 20px;
-background:linear-gradient(135deg,#000,#222);
-}
-
-h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.phone{
-display:inline-block;
-background:#28a745;
+.section h2{
+font-size:34px;
 color:white;
-padding:15px 25px;
-text-decoration:none;
-border-radius:10px;
-font-size:20px;
-margin-top:20px;
+border-bottom:4px solid #ab0520;
+display:inline-block;
+padding-bottom:8px;
 }
-
-.section{
-padding:40px 20px;
+.grid{
+display:grid;
+gap:18px;
+max-width:950px;
+margin:30px auto;
 }
-
 .card{
-background:#1f1f1f;
-margin:15px auto;
-padding:20px;
-border-radius:10px;
-max-width:600px;
+background:#0f2247;
+border:2px solid #1e3a8a;
+border-radius:18px;
+padding:24px;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
-
+.card h3{
+margin-top:0;
+color:#ffffff;
+}
 .price{
-font-size:28px;
-color:#00ff88;
+font-size:42px;
 font-weight:bold;
+color:#ffcc00;
 }
-
+.highlight{
+border-color:#ab0520;
+background:linear-gradient(135deg,#0f2247,#ab0520);
+}
+.list{
+line-height:1.9;
+font-size:18px;
+}
 .footer{
-padding:30px;
-background:black;
+background:#020817;
+padding:45px 20px;
+text-align:center;
+}
+.sticky{
+position:fixed;
+bottom:12px;
+left:12px;
+right:12px;
+display:flex;
+gap:10px;
+z-index:99;
+}
+.sticky a{
+flex:1;
+text-align:center;
+padding:14px;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+}
+@media(min-width:700px){
+.grid{grid-template-columns:repeat(3,1fr)}
+.sticky{max-width:500px;margin:auto;left:0;right:0}
 }
 </style>
 </head>
@@ -63,82 +128,92 @@ background:black;
 <body>
 
 <div class="hero">
+<div class="badge">TUCSON MOBILE BARBER</div>
 <h1>THA FADED KID</h1>
-<p>Mobile Barber Service</p>
-<p>We Come To You</p>
+<p class="subtitle">Wildcat Energy. Clean Fades. We Come To You.</p>
+<p>Serving Tucson & surrounding areas 24 hours with 2-hour advance notice.</p>
 
-<a class="phone" href="tel:5204066206">
-Call (520) 406-6206
-</a>
+<a class="cta call" href="tel:5204066206">Call Now</a>
+<a class="cta text" href="sms:5204066206">Text To Book</a>
 </div>
 
-<div class="section">
+<section class="section">
+<h2>Signature Cuts</h2>
 
-<h2>Services</h2>
-
+<div class="grid">
 <div class="card">Taper Fades</div>
 <div class="card">Shadow Fades</div>
 <div class="card">Edgar Haircuts</div>
 <div class="card">Gentleman's Tapers</div>
 <div class="card">Basic Haircuts</div>
 <div class="card">Shaves & Lineups</div>
-<div class="card">Hair Designs</div>
-
+<div class="card">Custom Designs</div>
+<div class="card">Special Occasion Cuts</div>
+<div class="card">Group Events</div>
 </div>
+</section>
 
-<div class="section">
-
+<section class="section">
 <h2>Pricing</h2>
 
-<div class="card">
+<div class="grid">
+<div class="card highlight">
+<h3>Basic Mobile Cut</h3>
 <div class="price">$50</div>
-Basic Haircut Service<br>
-Anywhere In Town
+<p>Fade, taper, Edgar, gentleman's cut, or basic haircut.</p>
+<p>We come to you anywhere in town.</p>
 </div>
 
-<div class="card">
+<div class="card highlight">
+<h3>Premium Cut + Design</h3>
 <div class="price">$75</div>
-Premium Haircut + Designs
+<p>Includes detailed design work, sharp lineup, and upgraded finish.</p>
 </div>
 
+<div class="card highlight">
+<h3>Group Package</h3>
+<div class="price">$35</div>
+<p>Per person for groups up to 7 people.</p>
+<p>Great for weddings, parties, functions, and special events.</p>
 </div>
-
-<div class="section">
-
-<h2>Group Packages</h2>
-
-<div class="card">
-Weddings<br>
-Parties<br>
-Special Events<br><br>
-
-Up To 7 People<br>
-
-<div class="price">$35 Each</div>
 </div>
+</section>
 
+<section class="section">
+<h2>Why Book Tha Faded Kid?</h2>
+
+<div class="card" style="max-width:800px;margin:30px auto;">
+<div class="list">
+🔥 24-hour mobile haircut service<br>
+🔥 Tucson local barber energy<br>
+🔥 Clean fades, tight tapers, sharp lineups<br>
+🔥 Great for groups, weddings, parties, and events<br>
+🔥 No shop wait — barber comes to you
 </div>
-
-<div class="section">
-
-<h2>Availability</h2>
-
-<div class="card">
-24 Hours<br>
-Minimum 2 Hour Advance Notice
 </div>
+</section>
 
+<section class="section">
+<h2>Book Your Cut</h2>
+
+<div class="card" style="max-width:700px;margin:30px auto;">
+<h3>Call or text ya boy KID</h3>
+<p class="price">(520) 406-6206</p>
+<a class="cta call" href="tel:5204066206">Call Now</a>
+<a class="cta text" href="sms:5204066206">Text Now</a>
 </div>
+</section>
 
 <div class="footer">
+<h2>THA FADED KID</h2>
+<p>Tucson Mobile Barber Service</p>
+<p>Clean Cuts • Wildcat Vibes • We Come To You</p>
+</div>
 
-<h2>Book Today</h2>
-
-<a class="phone" href="tel:5204066206">
-Call Or Text Now
-</a>
-
+<div class="sticky">
+<a class="call" href="tel:5204066206">Call</a>
+<a class="text" href="sms:5204066206">Text</a>
 </div>
 
 </body>
-  </html>
+</html>
