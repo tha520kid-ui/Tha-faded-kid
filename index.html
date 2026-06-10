@@ -9,97 +9,188 @@
 *{box-sizing:border-box}
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:#07142b;
+font-family:Arial,Helvetica,sans-serif;
+background:#020817;
 color:white;
+overflow-x:hidden;
+}
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 10%,rgba(255,204,0,.20),transparent 25%),
+radial-gradient(circle at 80% 20%,rgba(171,5,32,.30),transparent 25%),
+linear-gradient(135deg,#001c48,#020817 60%,#16000a);
+z-index:-3;
 }
 .hero{
 min-height:100vh;
-padding:40px 20px;
+position:relative;
+padding:55px 18px 90px;
 text-align:center;
-background:
-linear-gradient(rgba(7,20,43,.85),rgba(7,20,43,.95)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80');
-background-size:cover;
-background-position:center;
+overflow:hidden;
+}
+.hero:before{
+content:"WILDCAT CUTS";
+position:absolute;
+top:18%;
+left:50%;
+transform:translateX(-50%) rotate(-8deg);
+font-size:70px;
+font-weight:900;
+letter-spacing:5px;
+color:rgba(255,255,255,.05);
+white-space:nowrap;
+z-index:-1;
+}
+.hero:after{
+content:"🐾  🐾  🐾";
+position:absolute;
+bottom:90px;
+left:0;
+right:0;
+font-size:48px;
+opacity:.18;
+letter-spacing:25px;
+}
+.skyline{
+font-size:70px;
+margin-bottom:10px;
+filter:drop-shadow(0 0 20px #ffcc00);
 }
 .badge{
 display:inline-block;
-padding:8px 14px;
-border:2px solid #ab0520;
-border-radius:50px;
-color:white;
+padding:10px 18px;
+border:2px solid #ffcc00;
+border-radius:999px;
 background:#ab0520;
-font-weight:bold;
-margin-bottom:20px;
+font-weight:900;
+letter-spacing:1px;
+box-shadow:0 0 25px rgba(255,204,0,.5);
 }
 h1{
-font-size:54px;
-margin:10px 0;
-letter-spacing:2px;
-color:white;
-text-shadow:3px 3px #ab0520;
+font-size:58px;
+line-height:.95;
+margin:18px 0 10px;
+font-weight:900;
+text-shadow:4px 4px 0 #ab0520,0 0 25px #ffcc00;
 }
 .subtitle{
 font-size:22px;
-color:#e2e8f0;
+font-weight:bold;
+color:#ffcc00;
+}
+.hero-card{
+max-width:720px;
+margin:25px auto;
+padding:25px;
+border-radius:24px;
+background:rgba(5,18,45,.82);
+border:2px solid rgba(255,204,0,.8);
+box-shadow:0 0 40px rgba(171,5,32,.45);
+backdrop-filter:blur(8px);
 }
 .cta{
 display:inline-block;
-margin:15px 8px;
+margin:10px 6px;
 padding:16px 24px;
-border-radius:12px;
+border-radius:14px;
 text-decoration:none;
-font-weight:bold;
+font-weight:900;
 font-size:18px;
 }
-.call{background:#ab0520;color:white}
-.text{background:white;color:#07142b}
+.call{
+background:#ab0520;
+color:white;
+box-shadow:0 0 18px rgba(171,5,32,.8);
+}
+.text{
+background:#ffcc00;
+color:#001c48;
+box-shadow:0 0 18px rgba(255,204,0,.8);
+}
 .section{
-padding:45px 20px;
+padding:55px 18px;
 text-align:center;
+position:relative;
 }
 .section h2{
-font-size:34px;
-color:white;
-border-bottom:4px solid #ab0520;
+font-size:36px;
 display:inline-block;
-padding-bottom:8px;
+padding:8px 18px;
+border-bottom:5px solid #ab0520;
+text-shadow:2px 2px #001c48;
 }
 .grid{
 display:grid;
 gap:18px;
-max-width:950px;
-margin:30px auto;
+max-width:1050px;
+margin:35px auto;
 }
 .card{
-background:#0f2247;
-border:2px solid #1e3a8a;
-border-radius:18px;
-padding:24px;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
+position:relative;
+overflow:hidden;
+background:linear-gradient(145deg,#071b46,#0f2247);
+border:2px solid #ffcc00;
+border-radius:22px;
+padding:26px;
+box-shadow:0 15px 35px rgba(0,0,0,.45);
+}
+.card:before{
+content:"🐾";
+position:absolute;
+right:15px;
+top:8px;
+font-size:42px;
+opacity:.12;
 }
 .card h3{
 margin-top:0;
-color:#ffffff;
-}
-.price{
-font-size:42px;
-font-weight:bold;
+font-size:24px;
 color:#ffcc00;
 }
-.highlight{
-border-color:#ab0520;
-background:linear-gradient(135deg,#0f2247,#ab0520);
+.price{
+font-size:46px;
+font-weight:900;
+color:#ffcc00;
+text-shadow:2px 2px #ab0520;
+}
+.wild{
+background:linear-gradient(135deg,#001c48,#ab0520);
+transform:scale(1.02);
+}
+.mascot{
+font-size:90px;
+filter:drop-shadow(0 0 25px #ffcc00);
+}
+.desert{
+font-size:48px;
+letter-spacing:8px;
+opacity:.9;
 }
 .list{
-line-height:1.9;
-font-size:18px;
+font-size:19px;
+line-height:2;
+}
+.banner{
+margin:30px auto;
+max-width:900px;
+padding:25px;
+border-radius:24px;
+background:
+linear-gradient(rgba(0,28,72,.88),rgba(171,5,32,.78)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+border:3px solid #ffcc00;
+box-shadow:0 0 45px rgba(255,204,0,.3);
 }
 .footer{
-background:#020817;
-padding:45px 20px;
+padding:50px 20px 90px;
+background:#010711;
 text-align:center;
+border-top:4px solid #ab0520;
 }
 .sticky{
 position:fixed;
@@ -108,111 +199,126 @@ left:12px;
 right:12px;
 display:flex;
 gap:10px;
-z-index:99;
+z-index:999;
 }
 .sticky a{
 flex:1;
+padding:15px;
 text-align:center;
-padding:14px;
-border-radius:12px;
-font-weight:bold;
+border-radius:14px;
 text-decoration:none;
+font-weight:900;
 }
-@media(min-width:700px){
+@media(min-width:750px){
 .grid{grid-template-columns:repeat(3,1fr)}
-.sticky{max-width:500px;margin:auto;left:0;right:0}
+h1{font-size:84px}
+.hero:before{font-size:130px}
+.sticky{max-width:520px;margin:auto;left:0;right:0}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<section class="hero">
+<div class="skyline">🌵 🐾 ⭐</div>
 <div class="badge">TUCSON MOBILE BARBER</div>
-<h1>THA FADED KID</h1>
-<p class="subtitle">Wildcat Energy. Clean Fades. We Come To You.</p>
-<p>Serving Tucson & surrounding areas 24 hours with 2-hour advance notice.</p>
 
-<a class="cta call" href="tel:5204066206">Call Now</a>
-<a class="cta text" href="sms:5204066206">Text To Book</a>
+<h1>THA<br>FADED KID</h1>
+
+<p class="subtitle">Wildcat-Inspired Cuts • Tucson Energy • We Come To You</p>
+
+<div class="hero-card">
+<h2>Mobile Barber Service</h2>
+<p>Clean fades, sharp tapers, Edgars, lineups, designs, weddings, parties, and group cuts.</p>
+<p><b>Available 24 hours with at least 2-hour advance notice.</b></p>
+
+<a class="cta call" href="tel:5204066206">CALL NOW</a>
+<a class="cta text" href="sms:5204066206">TEXT TO BOOK</a>
 </div>
 
+<div class="desert">🌄 🌵 🏜️ 🌵 🌄</div>
+</section>
+
 <section class="section">
-<h2>Signature Cuts</h2>
+<h2>Signature Services</h2>
 
 <div class="grid">
-<div class="card">Taper Fades</div>
-<div class="card">Shadow Fades</div>
-<div class="card">Edgar Haircuts</div>
-<div class="card">Gentleman's Tapers</div>
-<div class="card">Basic Haircuts</div>
-<div class="card">Shaves & Lineups</div>
-<div class="card">Custom Designs</div>
-<div class="card">Special Occasion Cuts</div>
-<div class="card">Group Events</div>
+<div class="card"><h3>🔥 Taper Fades</h3><p>Clean, tight, professional finish.</p></div>
+<div class="card"><h3>⚡ Shadow Fades</h3><p>Smooth blend with sharp detail.</p></div>
+<div class="card"><h3>🐾 Edgar Cuts</h3><p>Fresh Tucson-style edge up.</p></div>
+<div class="card"><h3>💈 Gentleman’s Tapers</h3><p>Clean look for business or events.</p></div>
+<div class="card"><h3>✂️ Basic Cuts</h3><p>Fast, clean, and convenient.</p></div>
+<div class="card"><h3>🪒 Shaves & Lineups</h3><p>Crisp razor finish.</p></div>
+<div class="card"><h3>🎨 Hair Designs</h3><p>Custom design work available.</p></div>
+<div class="card"><h3>🎉 Party Functions</h3><p>We pull up for events.</p></div>
+<div class="card"><h3>💍 Weddings</h3><p>Group grooming packages.</p></div>
 </div>
 </section>
 
 <section class="section">
-<h2>Pricing</h2>
+<h2>Game-Day Pricing</h2>
 
 <div class="grid">
-<div class="card highlight">
+<div class="card wild">
 <h3>Basic Mobile Cut</h3>
 <div class="price">$50</div>
-<p>Fade, taper, Edgar, gentleman's cut, or basic haircut.</p>
+<p>Fade, taper, Edgar, gentleman’s cut, or basic haircut.</p>
 <p>We come to you anywhere in town.</p>
 </div>
 
-<div class="card highlight">
+<div class="card wild">
 <h3>Premium Cut + Design</h3>
 <div class="price">$75</div>
-<p>Includes detailed design work, sharp lineup, and upgraded finish.</p>
+<p>Includes custom designs, razor lineup, sharp details, and premium finish.</p>
 </div>
 
-<div class="card highlight">
+<div class="card wild">
 <h3>Group Package</h3>
 <div class="price">$35</div>
 <p>Per person for groups up to 7 people.</p>
-<p>Great for weddings, parties, functions, and special events.</p>
+<p>Perfect for weddings, parties, special events, and functions.</p>
 </div>
 </div>
 </section>
 
 <section class="section">
-<h2>Why Book Tha Faded Kid?</h2>
-
-<div class="card" style="max-width:800px;margin:30px auto;">
+<div class="banner">
+<div class="mascot">🐾</div>
+<h2>Wildcat-Level Fresh</h2>
 <div class="list">
-🔥 24-hour mobile haircut service<br>
-🔥 Tucson local barber energy<br>
-🔥 Clean fades, tight tapers, sharp lineups<br>
-🔥 Great for groups, weddings, parties, and events<br>
-🔥 No shop wait — barber comes to you
+🔥 24-hour mobile service<br>
+🔥 Tucson local energy<br>
+🔥 Clean fades and sharp lineups<br>
+🔥 No shop wait — barber comes to you<br>
+🔥 Special occasion and group packages
 </div>
 </div>
 </section>
 
 <section class="section">
-<h2>Book Your Cut</h2>
+<h2>Book Tha Faded Kid</h2>
 
-<div class="card" style="max-width:700px;margin:30px auto;">
-<h3>Call or text ya boy KID</h3>
-<p class="price">(520) 406-6206</p>
-<a class="cta call" href="tel:5204066206">Call Now</a>
-<a class="cta text" href="sms:5204066206">Text Now</a>
+<div class="card" style="max-width:750px;margin:35px auto;">
+<h3>Call or Text Ya Boy KID</h3>
+<div class="price">(520) 406-6206</div>
+<p>Send your location, haircut type, and preferred time.</p>
+
+<a class="cta call" href="tel:5204066206">CALL NOW</a>
+<a class="cta text" href="sms:5204066206">TEXT NOW</a>
 </div>
 </section>
 
-<div class="footer">
+<footer class="footer">
 <h2>THA FADED KID</h2>
 <p>Tucson Mobile Barber Service</p>
-<p>Clean Cuts • Wildcat Vibes • We Come To You</p>
-</div>
+<p>Wildcat Vibes • Desert Heat • Fresh Fades</p>
+<p>Call/Text: (520) 406-6206</p>
+</footer>
 
 <div class="sticky">
-<a class="call" href="tel:5204066206">Call</a>
-<a class="text" href="sms:5204066206">Text</a>
+<a class="call" href="tel:5204066206">CALL</a>
+<a class="text" href="sms:5204066206">TEXT</a>
 </div>
 
 </body>
